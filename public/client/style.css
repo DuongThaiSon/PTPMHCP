@@ -2514,3 +2514,21 @@ form input[type="reset"] {
 }
 
 
+.forecast-table{
+    margin-top: 125px;
+}
+.btn-search{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    background: transparent;
+    font-size: 20px;
+    color: #18c2e0;
+}
+.hourly-item{
+    cursor: pointer;
+    padding-top: 35px;
+}
+.btn-search:focus{
+    outline: none;
+}
