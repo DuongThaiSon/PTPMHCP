@@ -10,6 +10,7 @@ function getWeekday($date) {
 function isCurrent($date) {
     $current = strtotime(date("Y-m-d"));
     $date    = strtotime($date);
+ 
 
     $datediff = $date - $current;
     $difference = floor($datediff/(60*60*24));

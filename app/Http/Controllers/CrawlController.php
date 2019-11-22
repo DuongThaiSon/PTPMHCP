@@ -37,17 +37,18 @@ class CrawlController extends BaseController
     {
 
         // Delete old weather
-        DB::delete('delete from weather_daily');
+        
         DB::delete('delete from weather_hourly');
+        DB::delete('delete from weather_daily');
 
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
         // HN, HCM, Hai Duong, Hai Phong, Thanh Hoa, Da Lat
-        $defaultCitiesID = [1581130, 1566083, 1581326, 1581298, 1566166, 1584071];
+        $defaultCitiesID = [1581130,1580541,1572151];
 
         $datetime = Carbon::now()->toDateTimeString();
 
-        $tenDaysAgo = Carbon::now()->subDays(10);
+        $tenDaysAgo = Carbon::now()->subDays(7);
         $now = Carbon::now();
         // dd($tenDaysAgo);
 
@@ -257,7 +258,7 @@ class CrawlController extends BaseController
             if ($res->getStatusCode() == 200) { // 200 OK
                 $response_data = $res->getBody()->getContents();
                 $data_json = json_decode($response_data);
-                dd($data_json);
+                // dd($data_json);
                 $weather_daily = WeatherDaily::where("city_id", $data_json->city_id)->where("datetime", $data_json->data[0]->datetime)->first();
                 if($weather_daily) {
                     return;

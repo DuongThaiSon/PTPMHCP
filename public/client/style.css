@@ -1609,7 +1609,7 @@ form input[type="reset"] {
  * Header Styles
  */
 .site-header {
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 .site-header .branding {
@@ -1852,7 +1852,7 @@ form input[type="reset"] {
 
 .forecast-container .forecast.today .degree .num {
     font-size: 90px;
-    font-size: 6.4285714286rem;
+    font-size: 5.428571rem;
     margin-right: 30px;
 }
 
@@ -2452,7 +2452,7 @@ form input[type="reset"] {
 }
 
 #result p:hover {
-    background:#323444;
+    background: #323444;
 }
 
 
@@ -2462,8 +2462,8 @@ form input[type="reset"] {
 
 .hourly {
     margin-top: 10px;
-    background:#323544;
-    width:97%;
+    background: #323544;
+    width: 97%;
     height: 200px;
     position: absolute;
     display: none;
@@ -2471,7 +2471,8 @@ form input[type="reset"] {
     border-bottom-right-radius: 10px;
     color: #fff;
     overflow: auto;
-    left: 20px;
+    left: 18px;
+    border-radius: 10px;
 }
 
 
@@ -2514,10 +2515,11 @@ form input[type="reset"] {
 }
 
 
-.forecast-table{
+.forecast-table {
     margin-top: 125px;
 }
-.btn-search{
+
+.btn-search {
     position: absolute;
     right: 6px;
     top: 6px;
@@ -2525,10 +2527,18 @@ form input[type="reset"] {
     font-size: 20px;
     color: #18c2e0;
 }
-.hourly-item{
+
+.hourly-item {
     cursor: pointer;
     padding-top: 35px;
 }
-.btn-search:focus{
+
+.btn-search:focus {
     outline: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.hero{
+    height: 100vh;
 }

@@ -16,4 +16,8 @@ class WeatherDaily extends Model
     public function hourly() {
         return $this->hasMany(WeatherHourly::class);
     }
+
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
 }

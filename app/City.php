@@ -10,4 +10,8 @@ class City extends Model
     protected $fillable = [
         'city_id', 'name', 'country', 'coord'
     ];
+
+    public function weatherdaily(){
+        return $this->hasMany(WeatherDaily::class);
+    }
 }

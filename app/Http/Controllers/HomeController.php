@@ -21,24 +21,19 @@ class HomeController extends Controller
         // Default cities ID
         // Hai Phong, Thanh Hoa, HCM 
         $defaultCitiesID = [1581298, 1566166, 1566083];
-
+        $ct = City::where('city_id', 1581130)->get();
         $north = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[0])->limit(1)->get();
         $central = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[1])->limit(1)->get();
         $south = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[2])->limit(1)->get();
-
-        return view('client.index', compact("weathers_daily", "north", "central", "south"));
+        
+        return view('client.index', compact("weathers_daily","ct", "north", "central", "south"));
+        
     }
 
-    public function search(Request $request) {
-        if($request->search) {
-            $data = City::where('name', 'like', '%'. $request->search . '%')->get();
-            // foreach ($data as $key => $value) {
-            //     echo $value->name;
-            //     echo '<br>';
-            // }
-            return response()->json([
-                "result" => $data
-            ]);
-        }
+    public function search(Request $request){
+        $city = City::where('name', $request->key)->first();
+        $weathers_daily = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $city->city_id)->limit(7)->get();
+        $nam = $city->name;
+        return view('client.search',compact('nam',"weathers_daily"));
     }
 }

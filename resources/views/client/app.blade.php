@@ -30,7 +30,7 @@
                 <a href="/" class="branding">
                     <img src="{{ asset('client/images/logo.png') }}" alt="" class="logo">
                     <div class="logo-type">
-                        <h1 class="site-title">Weather Forecast</h1>
+                        <h1 class="site-title">Weather History</h1>
                         <small class="site-description">Software Technology</small>
                     </div>
                 </a>

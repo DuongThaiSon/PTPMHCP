@@ -123,8 +123,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'weatherbit_domain' => env('WEATHERBIT_DOMAIN', ''),
-    'weatherbit_api_key' => env('WEATHERBIT_API_KEY', ''),
+    'weatherbit_domain' => env('WEATHERBIT_DOMAIN', 'https://api.weatherbit.io'),
+    'weatherbit_api_key' => env('WEATHERBIT_API_KEY', '678128df8d0044e6ba9c2cb8837aca67'),
 
     /*
     |--------------------------------------------------------------------------
