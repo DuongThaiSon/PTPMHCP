@@ -5,7 +5,7 @@
 <div class="hero" data-bg-image="{{ asset('client/images/banner1.jpg') }}">
     <div class="container">
         <form action="{{route('search')}}" method="get" class="find-location" id="header-search" autocomplete="off">
-            <input autocomplete="off" type="text" class="search-input" name="key" placeholder="Find your location...">
+            <input autocomplete="off" type="text" class="search-input" name="key" placeholder="Nhập tên thành phố">
             <button type="submit" class="btn-search">
                 <i class="fas fa-search"></i>
             </button>

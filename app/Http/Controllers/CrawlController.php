@@ -43,8 +43,8 @@ class CrawlController extends BaseController
 
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
-        // HN, HCM, Hai Duong, Hai Phong, Thanh Hoa, Da Lat
-        $defaultCitiesID = [1581130,1580541,1572151];
+        // HN
+        $defaultCitiesID = [1581130,1559969,1562820,1566083,1581298,1576633];
 
         $datetime = Carbon::now()->toDateTimeString();
 
@@ -86,24 +86,24 @@ class CrawlController extends BaseController
         return $this->success('success');
     }
 
-    public function crawlCurrent(Request $request) {
-        $datetime = Carbon::now();
-        $date = $datetime->format("Y-m-d");
-        // dd($date);
-        $city_id = 1581130;
+    // public function crawlCurrent(Request $request) {
+    //     $datetime = Carbon::now();
+    //     $date = $datetime->format("Y-m-d");
+    //     // dd($date);
+    //     $city_id = 1581130;
 
-        $query_params = [
-            'city_id' => $city_id,
-            'key' => config("app.weatherbit_api_key")
-        ];
+    //     $query_params = [
+    //         'city_id' => $city_id,
+    //         'key' => config("app.weatherbit_api_key")
+    //     ];
 
-        $this->fetchCurrentWeather($query_params);
-        return $this->success('success');
-    }
+    //     $this->fetchCurrentWeather($query_params);
+    //     return $this->success('success');
+    // }
 
-    private function crawlHourly(Request $request)
-    {
-    }
+    // private function crawlHourly(Request $request)
+    // {
+    // }
 
     public function crawlCity()
     {
