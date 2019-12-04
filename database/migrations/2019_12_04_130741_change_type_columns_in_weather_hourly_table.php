@@ -51,5 +51,4 @@ class ChangeTypeColumnsInWeatherHourlyTable extends Migration
             $table->integer("clouds")->after('precip');
         });
     }
-    }
 }
