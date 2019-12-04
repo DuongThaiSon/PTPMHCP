@@ -28,7 +28,7 @@
         <div class="site-header">
             <div class="container">
                 <a href="/" class="branding">
-                    <img src="{{ asset('client/images/logo.png') }}" alt="" class="logo">
+                    <img src="{{ asset('assets/client/images/logo.png') }}" alt="" class="logo">
                     <div class="logo-type">
                         <h1 class="site-title">Weather History</h1>
                         <small class="site-description">Software Technology</small>
