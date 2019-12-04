@@ -26,7 +26,7 @@ class HomeController extends Controller
         $central = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[1])->limit(1)->get();
         $south = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[2])->limit(1)->get();
         
-        return view('client.index', compact("weathers_daily","ct", "north", "central", "south"));
+        return view('client.index', compact("weathers_daily","ct", "north", "central", "south", "list_city"));
         
     }
 
