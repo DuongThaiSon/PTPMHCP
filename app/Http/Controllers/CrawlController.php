@@ -38,8 +38,8 @@ class CrawlController extends BaseController
 
         // Delete old weather
         
-        DB::delete('delete from weather_hourly');
-        DB::delete('delete from weather_daily');
+        // DB::delete('delete from weather_hourly');
+        // DB::delete('delete from weather_daily');
 
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
