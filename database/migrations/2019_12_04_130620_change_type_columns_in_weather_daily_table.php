@@ -14,15 +14,26 @@ class ChangeTypeColumnsInWeatherDailyTable extends Migration
     public function up()
     {
         Schema::table('weather_daily', function (Blueprint $table) {
-            $table->double("rh")->change();
-            $table->double("clouds")->change();
-            $table->double("precip_gpm")->change();
-            $table->double("precip")->change();
-            $table->double("wind_dir")->change();
-            $table->double("max_temp")->change();
-            $table->double("min_temp")->change();
-            $table->double("max_wind_dir")->change();
-            $table->double("snow")->change();
+            $table->dropColumn("rh");
+            $table->dropColumn("clouds");
+            $table->dropColumn("precip_gpm");
+            $table->dropColumn("precip");
+            $table->dropColumn("wind_dir");
+            $table->dropColumn("max_temp");
+            $table->dropColumn("min_temp");
+            $table->dropColumn("max_wind_dir");
+            $table->dropColumn("snow");
+        });
+        Schema::table('weather_daily', function (Blueprint $table) {
+            $table->double("rh")->after('city_id');
+            $table->double("clouds")->after('rh');
+            $table->double("precip_gpm")->after('clouds');
+            $table->double("precip")->after('precip_gpm');
+            $table->double("wind_dir")->after('precip');
+            $table->double("max_temp")->after('wind_dir');
+            $table->double("min_temp")->after('max_temp');
+            $table->double("max_wind_dir")->after('min_temp');
+            $table->double("snow")->after('max_wind_dir');
         });
     }
 
@@ -34,15 +45,26 @@ class ChangeTypeColumnsInWeatherDailyTable extends Migration
     public function down()
     {
         Schema::table('weather_daily', function (Blueprint $table) {
-            $table->integer("rh")->change();
-            $table->integer("clouds")->change();
-            $table->integer("precip_gpm")->change();
-            $table->integer("precip")->change();
-            $table->integer("wind_dir")->change();
-            $table->integer("max_temp")->change();
-            $table->integer("min_temp")->change();
-            $table->integer("max_wind_dir")->change();
-            $table->integer("snow")->change();
+            $table->dropColumn("rh");
+            $table->dropColumn("clouds");
+            $table->dropColumn("precip_gpm");
+            $table->dropColumn("precip");
+            $table->dropColumn("wind_dir");
+            $table->dropColumn("max_temp");
+            $table->dropColumn("min_temp");
+            $table->dropColumn("max_wind_dir");
+            $table->dropColumn("snow");
+        });
+        Schema::table('weather_daily', function (Blueprint $table) {
+            $table->integer("rh")->after('city_id');
+            $table->integer("clouds")->after('rh');
+            $table->integer("precip_gpm")->after('clouds');
+            $table->integer("precip")->after('precip_gpm');
+            $table->integer("wind_dir")->after('precip');
+            $table->integer("max_temp")->after('wind_dir');
+            $table->integer("min_temp")->after('max_temp');
+            $table->integer("max_wind_dir")->after('min_temp');
+            $table->integer("snow")->after('max_wind_dir');
         });
     }
 }

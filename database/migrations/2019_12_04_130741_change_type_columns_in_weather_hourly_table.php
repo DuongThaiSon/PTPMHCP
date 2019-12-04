@@ -14,11 +14,18 @@ class ChangeTypeColumnsInWeatherHourlyTable extends Migration
     public function up()
     {
         Schema::table('weather_hourly', function (Blueprint $table) {
-            $table->double("rh")->change();
-            $table->double("snow")->change();
-            $table->double("wind_dir")->change();
-            $table->double("precip")->change();
-            $table->double("clouds")->change();
+            $table->dropColumn("rh");
+            $table->dropColumn("snow");
+            $table->dropColumn("wind_dir");
+            $table->dropColumn("precip");
+            $table->dropColumn("clouds");
+        });
+        Schema::table('weather_hourly', function (Blueprint $table) {
+            $table->double("rh")->after('city_id');
+            $table->double("snow")->after('rh');
+            $table->double("wind_dir")->after('snow');
+            $table->double("precip")->after('wind_dir');
+            $table->double("clouds")->after('precip');
         });
     }
 
@@ -30,11 +37,19 @@ class ChangeTypeColumnsInWeatherHourlyTable extends Migration
     public function down()
     {
         Schema::table('weather_hourly', function (Blueprint $table) {
-            $table->integer("rh")->change();
-            $table->integer("snow")->change();
-            $table->integer("wind_dir")->change();
-            $table->integer("precip")->change();
-            $table->integer("clouds")->change();
+            $table->dropColumn("rh");
+            $table->dropColumn("snow");
+            $table->dropColumn("wind_dir");
+            $table->dropColumn("precip");
+            $table->dropColumn("clouds");
         });
+        Schema::table('weather_hourly', function (Blueprint $table) {
+            $table->integer("rh")->after('city_id');
+            $table->integer("snow")->after('rh');
+            $table->integer("wind_dir")->after('snow');
+            $table->integer("precip")->after('wind_dir');
+            $table->integer("clouds")->after('precip');
+        });
+    }
     }
 }
