@@ -43,8 +43,52 @@ class CrawlController extends BaseController
 
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
-        // HN
-        $defaultCitiesID = [1581130,1559969,1562820,1566083,1581298,1576633];
+        $defaultCitiesID = [
+                            1581130,    //hn
+                            1566083,    //hcm
+                            1581298,    //haiphong
+                            1586203,    //can tho
+                            1587923,    //bien hoa
+                            1572151,    //nha trang
+                            1580240,    //hue
+                            1586896,    //buon ma thuat
+                            1562798,    //vinh
+                            1562414,    //vung tau
+                            1568574,    //quy nhon
+                            1575627,    //long xuyen
+                            1566319,    //thai nguyen
+                            1573517,    //nam dinh
+                            1568510,    //rach gia
+                            1565022,    //thu dau mot
+                            1580410,    //ha long
+                            1571058,    //phan thiet
+                            1566166,    //thanh hoa
+                            1563287,    //tuyenquang
+                            1591449,    //bac ninh
+                            1591527,    //bac giang
+                            1584071,    //da lat
+                            1581047,    //ha tinh
+                            1574023,    //my tho
+                            1562548,    //vinh yen
+                            1567148,    //tam ky
+                            1567621,    //son tay
+                            1571968,    //ninh binh
+                            1566346,    //thai binh
+                            1586443,    //ca mau
+                            1582886,    //dong hoi
+                            1569684,    //pleiku
+                            1562820,    //viet tri
+                            1586185,    //cao bang
+                            1560349,    //yen bai
+                            1580830,    //hoa binh
+                            1580541,    //hoi an
+                            1581349,    //ha giang
+                            1578500,    //kon tum
+                            1567681,    //son la
+                            1563241,    //uong bi
+                            1567788,    //soc trang
+                            1568043,    //sa pa
+                        ];
 
         $datetime = Carbon::now()->toDateTimeString();
 
@@ -61,11 +105,6 @@ class CrawlController extends BaseController
                 $date_time_start = $dt->toDateTimeString();
                 $date_time_e = $dt->modify('+1 day');
                 $date_time_end = $date_time_e->toDateTimeString();
-
-                // if($index == 9) {
-                //     $date_time_end = $period->end->format('Y-m-d H:i:s');
-                // }
-
                 $date_start = explode(" ", $date_time_start)[0];
                 $date_end = explode(" ", $date_time_end)[0];
 
@@ -85,25 +124,6 @@ class CrawlController extends BaseController
         ini_set('max_execution_time', 60); //back to origin
         return $this->success('success');
     }
-
-    // public function crawlCurrent(Request $request) {
-    //     $datetime = Carbon::now();
-    //     $date = $datetime->format("Y-m-d");
-    //     // dd($date);
-    //     $city_id = 1581130;
-
-    //     $query_params = [
-    //         'city_id' => $city_id,
-    //         'key' => config("app.weatherbit_api_key")
-    //     ];
-
-    //     $this->fetchCurrentWeather($query_params);
-    //     return $this->success('success');
-    // }
-
-    // private function crawlHourly(Request $request)
-    // {
-    // }
 
     public function crawlCity()
     {
@@ -263,26 +283,6 @@ class CrawlController extends BaseController
                 if($weather_daily) {
                     return;
                 }
-                // $weather_daily = new WeatherDaily();
-                // $weather_daily->city_id = $data_json->city_id;
-                // $weather_daily->rh = $data_json->data[0]->rh;
-                // $weather_daily->max_wind_spd = $data_json->data[0]->max_wind_spd;
-                // $weather_daily->wind_gust_spd = $data_json->data[0]->wind_gust_spd;
-                // $weather_daily->clouds = $data_json->data[0]->clouds;
-                // $weather_daily->precip_gpm = $data_json->data[0]->precip_gpm;
-                // $weather_daily->wind_spd = $data_json->data[0]->wind_spd;
-                // $weather_daily->slp = $data_json->data[0]->slp;
-                // $weather_daily->temp = $data_json->data[0]->temp;
-                // $weather_daily->pres = $data_json->data[0]->pres;
-                // $weather_daily->dewpt = $data_json->data[0]->dewpt;
-                // $weather_daily->precip = $data_json->data[0]->precip;
-                // $weather_daily->wind_dir = $data_json->data[0]->wind_dir;
-                // $weather_daily->max_temp = $data_json->data[0]->max_temp;
-                // $weather_daily->min_temp = $data_json->data[0]->min_temp;
-                // $weather_daily->max_wind_dir = $data_json->data[0]->max_wind_dir;
-                // $weather_daily->snow = $data_json->data[0]->snow;
-                // $weather_daily->datetime = $data_json->data[0]->datetime;
-                // $weather_daily->save();
 
                 // Crawl hourly
                 $url = config('app.weatherbit_domain') . "/v2.0/history/hourly";
