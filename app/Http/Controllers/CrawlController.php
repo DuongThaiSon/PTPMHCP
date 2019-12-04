@@ -46,7 +46,7 @@ class CrawlController extends BaseController
         $defaultCitiesID = [
                             // 1581130,    //hn
                             1566083,    //hcm
-                            // 1581298,    //haiphong
+                            1581298,    //haiphong
                             // 1586203,    //can tho
                             // 1587923,    //bien hoa
                             // 1572151,    //nha trang
