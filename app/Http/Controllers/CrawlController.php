@@ -44,50 +44,50 @@ class CrawlController extends BaseController
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
         $defaultCitiesID = [
-                            1581130,    //hn
+                            // 1581130,    //hn
                             1566083,    //hcm
-                            1581298,    //haiphong
-                            1586203,    //can tho
-                            1587923,    //bien hoa
-                            1572151,    //nha trang
-                            1580240,    //hue
-                            1586896,    //buon ma thuat
-                            1562798,    //vinh
-                            1562414,    //vung tau
-                            1568574,    //quy nhon
-                            1575627,    //long xuyen
-                            1566319,    //thai nguyen
-                            1573517,    //nam dinh
-                            1568510,    //rach gia
-                            1565022,    //thu dau mot
-                            1580410,    //ha long
-                            1571058,    //phan thiet
-                            1566166,    //thanh hoa
-                            1563287,    //tuyenquang
-                            1591449,    //bac ninh
-                            1591527,    //bac giang
-                            1584071,    //da lat
-                            1581047,    //ha tinh
-                            1574023,    //my tho
-                            1562548,    //vinh yen
-                            1567148,    //tam ky
-                            1567621,    //son tay
-                            1571968,    //ninh binh
-                            1566346,    //thai binh
-                            1586443,    //ca mau
-                            1582886,    //dong hoi
-                            1569684,    //pleiku
-                            1562820,    //viet tri
-                            1586185,    //cao bang
-                            1560349,    //yen bai
-                            1580830,    //hoa binh
-                            1580541,    //hoi an
-                            1581349,    //ha giang
-                            1578500,    //kon tum
-                            1567681,    //son la
-                            1563241,    //uong bi
-                            1567788,    //soc trang
-                            1568043,    //sa pa
+                            // 1581298,    //haiphong
+                            // 1586203,    //can tho
+                            // 1587923,    //bien hoa
+                            // 1572151,    //nha trang
+                            // 1580240,    //hue
+                            // 1586896,    //buon ma thuat
+                            // 1562798,    //vinh
+                            // 1562414,    //vung tau
+                            // 1568574,    //quy nhon
+                            // 1575627,    //long xuyen
+                            // 1566319,    //thai nguyen
+                            // 1573517,    //nam dinh
+                            // 1568510,    //rach gia
+                            // 1565022,    //thu dau mot
+                            // 1580410,    //ha long
+                            // 1571058,    //phan thiet
+                            // 1566166,    //thanh hoa
+                            // 1563287,    //tuyenquang
+                            // 1591449,    //bac ninh
+                            // 1591527,    //bac giang
+                            // 1584071,    //da lat
+                            // 1581047,    //ha tinh
+                            // 1574023,    //my tho
+                            // 1562548,    //vinh yen
+                            // 1567148,    //tam ky
+                            // 1567621,    //son tay
+                            // 1571968,    //ninh binh
+                            // 1566346,    //thai binh
+                            // 1586443,    //ca mau
+                            // 1582886,    //dong hoi
+                            // 1569684,    //pleiku
+                            // 1562820,    //viet tri
+                            // 1586185,    //cao bang
+                            // 1560349,    //yen bai
+                            // 1580830,    //hoa binh
+                            // 1580541,    //hoi an
+                            // 1581349,    //ha giang
+                            // 1578500,    //kon tum
+                            // 1567681,    //son la
+                            // 1563241,    //uong bi
+                            // 1567788,    //soc trang
+                            // 1568043,    //sa pa
                         ];
 
         $datetime = Carbon::now()->toDateTimeString();
