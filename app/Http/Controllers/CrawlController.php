@@ -45,8 +45,8 @@ class CrawlController extends BaseController
         // Default cities ID
         $defaultCitiesID = [
                             // 1581130,    //hn
-                            1566083,    //hcm
-                            1581298,    //haiphong
+                            // 1566083,    //hcm
+                            // 1581298,    //haiphong
                             // 1586203,    //can tho
                             // 1587923,    //bien hoa
                             // 1572151,    //nha trang
@@ -68,9 +68,9 @@ class CrawlController extends BaseController
                             // 1591527,    //bac giang
                             // 1584071,    //da lat
                             // 1581047,    //ha tinh
-                            // 1574023,    //my tho
-                            // 1562548,    //vinh yen
-                            // 1567148,    //tam ky
+                            1574023,    //my tho
+                            1562548,    //vinh yen
+                            1567148,    //tam ky
                             // 1567621,    //son tay
                             // 1571968,    //ninh binh
                             // 1566346,    //thai binh
