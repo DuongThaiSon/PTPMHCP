@@ -31,7 +31,7 @@ class HomeController extends Controller
     }
 
     public function search(Request $request){
-        $city = City::where('name', 'like' , '%'.$request->key.'%')->first();
+        $city = City::where('name',$request->key)->first();
         $weathers_daily = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $city->city_id)->limit(7)->get();
         $nam = $city->name;
         return view('client.search',compact('nam',"weathers_daily"));
