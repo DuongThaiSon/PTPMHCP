@@ -33,9 +33,8 @@
                                     <img src="{{ asset('client/images/icons/icon-1.svg') }}" alt="" width=90>
                                 </div>
                             </div>
-                            <span><img src="images/icon-umberella.png" alt="">{{ $daily->rh }}%</span>
-                            <span><img src="images/icon-wind.png" alt="">{{ $daily->wind_dir }}km/h</span>
-                            <!-- <span><img src="images/icon-compass.png" alt="">East</span> -->
+                            <span><img src="{{ asset('client/images/icon-umberella.png') }}" alt="">{{ $daily->rh }}%</span>
+                            <span><img src="{{ asset('client/images/icon-wind.png') }}" alt="">{{ $daily->wind_dir }}km/h</span>
                         </div>
                         <div class="notToday">
                             <div class="forecast-icon">
