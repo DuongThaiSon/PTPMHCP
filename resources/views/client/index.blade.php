@@ -12,6 +12,11 @@
             <div id="result"></div>
         </form>
     </div>
+    <div>
+        @foreach($list_city as $city)
+            <p>{{ $city->city->name ?? '' }}</p>
+        @endforeach
+    </div>
     <div class="forecast-table">
         <div class="container main-daily">
             <div class="forecast-container">
