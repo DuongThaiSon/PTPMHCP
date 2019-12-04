@@ -249,7 +249,8 @@ class CrawlController extends BaseController
                             $weather_hourly->temp = $value->temp;
                             $weather_hourly->precip = $value->precip;
                             $weather_hourly->clouds = $value->clouds;
-                            $weather_hourly->datetime = $value->datetime;
+                            $weather_hourly->datetime = \Carbon\Carbon::create($value->datetime);
+                            // print_r($weather_hourly);die;
                             $weather_hourly->save();
                         }
 
