@@ -8,16 +8,16 @@
 
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-    <link href="{{ asset('client/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/client/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-    <link href="{{ asset('client/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/client/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Loading main css file -->
-    <link rel="stylesheet" href="{{ asset('client/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/client/style.css') }}">
     <script src="https://kit.fontawesome.com/540cf737fa.js" crossorigin="anonymous"></script>
 
 </head>
@@ -39,9 +39,9 @@
     </div>
     @yield('content')
 
-    <script src="{{ asset('client/js/jquery-1.11.1.min.js') }}"></script>
-    <script src="{{ asset('client/js/plugins.js') }}"></script>
-    <script src="{{ asset('client/js/app.js') }}"></script>
+    <script src="{{ asset('assets/client/js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('assets/client/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/client/js/app.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 
     <!-- jQuery library -->
@@ -53,7 +53,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script src="{{ asset('client/script.js') }}"></script>
+    <script src="{{ asset('assets/client/script.js') }}"></script>
     @stack('scripts')
 </body>
 

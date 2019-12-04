@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="hero" data-bg-image="{{ asset('client/images/banner1.jpg') }}">
+<div class="hero" data-bg-image="{{ asset('assets/client/images/banner1.jpg') }}">
     <div class="container">
         <form action="{{route('search')}}" method="get" class="find-location" id="header-search" autocomplete="off">
             <input autocomplete="off" type="text" class="search-input" name="key" placeholder="Nhập tên thành phố">
@@ -30,15 +30,15 @@
                             <div class="degree">
                                 <div class="num">{{ $daily->temp }}<sup>o</sup>C</div>
                                 <div class="forecast-icon">
-                                    <img src="{{ asset('client/images/icons/icon-1.svg') }}" alt="" width=90>
+                                    <img src="{{ asset('assets/client/images/icons/icon-1.svg') }}" alt="" width=90>
                                 </div>
                             </div>
-                            <span><img src="{{ asset('client/images/icon-umberella.png') }}" alt="">{{ $daily->rh }}%</span>
-                            <span><img src="{{ asset('client/images/icon-wind.png') }}" alt="">{{ $daily->wind_dir }}km/h</span>
+                            <span><img src="{{ asset('assets/client/images/icon-umberella.png') }}" alt="">{{ $daily->rh }}%</span>
+                            <span><img src="{{ asset('assets/client/images/icon-wind.png') }}" alt="">{{ $daily->wind_dir }}km/h</span>
                         </div>
                         <div class="notToday">
                             <div class="forecast-icon">
-                                <img src="{{ asset('client/images/icons/icon-3.svg') }}" alt="" width=48>
+                                <img src="{{ asset('assets/client/images/icons/icon-3.svg') }}" alt="" width=48>
                             </div>
                             <div class="degree">{{ $daily->temp }}<sup>o</sup>C</div>
                         </div>
