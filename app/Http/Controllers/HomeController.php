@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $weathers_daily = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', 1581130)->limit(7)->get();
-        $listCity = WeatherDaily::get('city_id')->dupplicate();
+        $list_city = WeatherDaily::get()->unique('city_id')->load(['city']);
         // Default cities ID
         // Hai Phong, Thanh Hoa, HCM 
         $defaultCitiesID = [1581298, 1566166, 1566083];

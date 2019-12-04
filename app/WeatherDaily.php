@@ -8,7 +8,7 @@ use App\WeatherHourly;
 class WeatherDaily extends Model
 {
     protected $table = 'weather_daily';
-
+    protected $guarded = ['id'];
     protected $fillable = [
         'city_id'
     ];
@@ -18,6 +18,6 @@ class WeatherDaily extends Model
     }
 
     public function city(){
-        return $this->belongsTo(City::class);
+        return $this->belongsTo('App\City', 'city_id', 'city_id');
     }
 }
