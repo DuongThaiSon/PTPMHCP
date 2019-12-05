@@ -88,6 +88,8 @@ class CrawlController extends BaseController
                             // 1563241,    //uong bi
                             // 1567788,    //soc trang
                             // 1568043,    //sa pa
+                            1581326,    //hai duong
+                            1587976,    //ben tre
                         ];
 
         $datetime = Carbon::now()->toDateTimeString();
