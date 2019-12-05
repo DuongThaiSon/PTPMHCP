@@ -31,3 +31,5 @@ Route::get('/fetch-current', 'CrawlController@crawlCurrent');
 
 Route::get('/manage', 'AdminController@dashboard');
 
+Route::get('/clear-database', 'CrawlController@clearDatabase');
+
