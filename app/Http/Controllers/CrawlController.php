@@ -85,17 +85,17 @@ class CrawlController extends BaseController
                             // 1569684,    //pleiku
                             // 1562820,    //viet tri
                             // 1586185,    //cao bang
-                            1560349,    //yen bai
-                            1580830,    //hoa binh
-                            1580541,    //hoi an
-                            1581349,    //ha giang
-                            1578500,    //kon tum
-                            1567681,    //son la
-                            // 1563241,    //uong bi
-                            // 1567788,    //soc trang
-                            // 1568043,    //sa pa
-                            // 1581326,    //hai duong
-                            // 1587976,    //ben tre
+                            // 1560349,    //yen bai
+                            // 1580830,    //hoa binh
+                            // 1580541,    //hoi an
+                            // 1581349,    //ha giang
+                            // 1578500,    //kon tum
+                            // 1567681,    //son la
+                            1563241,    //uong bi
+                            1567788,    //soc trang
+                            1568043,    //sa pa
+                            1581326,    //hai duong
+                            1587976,    //ben tre
                         ];
 
         $datetime = Carbon::now()->toDateTimeString();
