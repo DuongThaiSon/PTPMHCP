@@ -84,7 +84,7 @@ class CrawlController extends BaseController
                             1582886,    //dong hoi
                             1569684,    //pleiku
                             1562820,    //viet tri
-                            // 1586185,    //cao bang
+                            1586185,    //cao bang
                             // 1560349,    //yen bai
                             // 1580830,    //hoa binh
                             // 1580541,    //hoi an
