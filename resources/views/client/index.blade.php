@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="hero" data-bg-image="{{ asset('assets/client/images/banner1.jpg') }}">
+<div class="hero" data-bg-image="{{ asset('assets/client/images/star.jpg') }}">
     <div class="container">
         <form action="{{route('search')}}" method="get" class="find-location" id="header-search" autocomplete="off">
             <input autocomplete="off" type="text" class="search-input" name="key" placeholder="Nhập tên thành phố">
