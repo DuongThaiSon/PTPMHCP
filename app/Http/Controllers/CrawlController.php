@@ -74,16 +74,16 @@ class CrawlController extends BaseController
                             // 1591527,    //bac giang
                             // 1584071,    //da lat
                             // 1581047,    //ha tinh
-                            1574023,    //my tho
-                            1562548,    //vinh yen
-                            1567148,    //tam ky
-                            1567621,    //son tay
+                            // 1574023,    //my tho
+                            // 1562548,    //vinh yen
+                            // 1567148,    //tam ky
+                            // 1567621,    //son tay
                             1571968,    //ninh binh
                             1566346,    //thai binh
-                            // 1586443,    //ca mau
-                            // 1582886,    //dong hoi
-                            // 1569684,    //pleiku
-                            // 1562820,    //viet tri
+                            1586443,    //ca mau
+                            1582886,    //dong hoi
+                            1569684,    //pleiku
+                            1562820,    //viet tri
                             // 1586185,    //cao bang
                             // 1560349,    //yen bai
                             // 1580830,    //hoa binh
