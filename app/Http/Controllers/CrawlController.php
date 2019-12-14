@@ -58,17 +58,17 @@ class CrawlController extends BaseController
                             // 1572151,    //nha trang
                             // 1580240,    //hue
                             // 1586896,    //buon ma thuat
-                            1562798,    //vinh
-                            1562414,    //vung tau
-                            1568574,    //quy nhon
-                            1575627,    //long xuyen
-                            1566319,    //thai nguyen
-                            // 1573517,    //nam dinh
-                            // 1568510,    //rach gia
-                            // 1565022,    //thu dau mot
-                            // 1580410,    //ha long
-                            // 1571058,    //phan thiet
-                            // 1566166,    //thanh hoa
+                            // 1562798,    //vinh
+                            // 1562414,    //vung tau
+                            // 1568574,    //quy nhon
+                            // 1575627,    //long xuyen
+                            // 1566319,    //thai nguyen
+                            1573517,    //nam dinh
+                            1568510,    //rach gia
+                            1565022,    //thu dau mot
+                            1580410,    //ha long
+                            1571058,    //phan thiet
+                            1566166,    //thanh hoa
                             // 1563287,    //tuyenquang
                             // 1591449,    //bac ninh
                             // 1591527,    //bac giang
