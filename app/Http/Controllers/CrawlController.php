@@ -44,16 +44,16 @@ class CrawlController extends BaseController
 
         // Delete old weather
         
-        // DB::delete('delete from weather_hourly');
-        // DB::delete('delete from weather_daily');
+        DB::delete('delete from weather_hourly');
+        DB::delete('delete from weather_daily');
 
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
         $defaultCitiesID = [
-                            // 1581130,    //hn
+                            1581130,    //hn
                             1566083,    //hcm
                             1581298,    //haiphong
-                            1586203,    //can tho
+                            // 1586203,    //can tho
                             // 1587923,    //bien hoa
                             // 1572151,    //nha trang
                             // 1580240,    //hue
