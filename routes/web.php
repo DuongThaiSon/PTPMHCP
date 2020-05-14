@@ -29,7 +29,12 @@ Route::get('/update-weather', 'CrawlController@crawlDaily');
 Route::get("/update-city", 'CrawlController@crawlCity');
 Route::get('/fetch-current', 'CrawlController@crawlCurrent');
 
-Route::get('/manage', 'AdminController@dashboard');
+Route::get('/admin', 'AdminController@dashboard');
 
 Route::get('/clear-database', 'CrawlController@clearDatabase');
-
+Route::get('/admin/weather-daily', function (){
+    return view('admin.views.weather-list.weather-daily');
+});
+Route::get('/admin/weather-hourly', function (){
+    return view('admin.views.weather-list.weather-hourly');
+});
