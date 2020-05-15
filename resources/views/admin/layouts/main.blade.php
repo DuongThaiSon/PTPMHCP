@@ -13,6 +13,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <script src="https://kit.fontawesome.com/540cf737fa.js" crossorigin="anonymous"></script>
     <link href="{{ asset('assets/admin') }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/admin') }}/css/datatable.min.css" rel="stylesheet">
     <link href="{{ asset('assets/admin') }}/css/main.css" rel="stylesheet">
 </head>
 
@@ -31,7 +32,9 @@
     <script src="{{ asset('assets/admin') }}/js/jquery.min.js"></script>
     <script src="{{ asset('assets/admin') }}/js/popper.min.js"></script>
     <script src="{{ asset('assets/admin') }}/js/bootstrap.min.js"></script>
-    <script src="{{ asset('assets/admin') }}/js/main.js"></script>  
+    <script src="{{ asset('assets/admin') }}/js/datatable.min.js"></script>
+    <script src="{{ asset('assets/admin') }}/js/chart.min.js"></script>  
+    <script src="{{ asset('assets/admin') }}/js/script.js"></script>  
 </body>
 
 </html>

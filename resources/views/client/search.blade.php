@@ -75,7 +75,7 @@
                                             src="https://www.weatherbit.io/static/img/icons/{{ $hourly->weather_json->icon }}.png" />
                                         <p>Độ ẩm tương đối: {{ $hourly->rh }}%</p>
                                         <p>Tốc độ gió: {{ $hourly->wind_spd }}m/s</p>
-                                        <p>Áp suất: {{ $hourly->press }}</p>
+                                        <p>Áp suất: {{ $hourly->pres }}</p>
                                         <p>Tầm nhìn xa: {{ $hourly->vis}}km</p>
                                         <p>Mực nước biển: {{ $hourly->slp }}mb</p>
                                         <p>Thời điểm: {{ $hourly->pod == "d"  ? 'Ngày' : 'Đêm' }}</p>

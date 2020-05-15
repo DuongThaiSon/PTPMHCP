@@ -20,7 +20,6 @@ class CrawlController extends BaseController
     {
         DB::delete('delete from weather_hourly');
         DB::delete('delete from weather_daily');
-        // \Carbon\Carbon::createFromFormat('Y-m-d H', implode(" ", explode(':',$value->datetime)))
     }
 
     public function crawl(Request $request)

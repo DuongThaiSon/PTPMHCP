@@ -41,7 +41,7 @@
                         Trang chủ
                     </a>
                 </li>
-                <li class="{{ Request::is('admin/weather-daily') ? 'mm-active' : '' }}">
+                <li class="{{ Request::is('admin/weather-daily') || Request::is('admin/weather-hourly') ? 'mm-active' : '' }}">
                     <a href="/admin/weather-daily">
                         <i class="metismenu-icon pe-7s-cloud"></i>
                         Quản lý thời tiết

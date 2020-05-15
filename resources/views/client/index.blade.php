@@ -1,5 +1,4 @@
 @extends('client.app')
-
 @section('content')
 
 <div class="hero" data-bg-image="{{ asset('assets/client/images/star.jpg') }}">
@@ -21,15 +20,12 @@
         <div class="container main-daily">
             <div class="forecast-container">
                 @foreach($weathers_daily as $key => $daily)
-
-                <!-- TODO: print current  -->
                 @if($key == 0)
-
                 <div class="today forecast">
                     <div class="forecast-header">
                         <div class="day">{{ getWeekday($daily->datetime) }}</div>
                         <div class="date">{{ $daily->datetime }}</div>
-                    </div> <!-- .forecast-header -->
+                    </div>
                     <div class="forecast-content">
                         <div class="isToday">
                             <div class="location">Ha Noi</div>
@@ -62,23 +58,18 @@
                                 <img src="https://www.weatherbit.io/static/img/icons/{{ $hourly->weather_json->icon }}.png" />
                             </div>
                         </div>
-
-                        <!-- The Modal -->
                         <div class="modal" id="hourly{{$hourly->id}}" style="color: #000">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-
-                                    <!-- Modal Header -->
                                     <div class="modal-header">
                                         <h4 class="modal-title">Giờ: {{ $hourly->hour }}</h4>
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
-
-                                    <!-- Modal body -->
                                     <div class="modal-body">
                                         <img src="https://www.weatherbit.io/static/img/icons/{{ $hourly->weather_json->icon }}.png" />
                                         <p>Độ ẩm tương đối: {{ $hourly->rh }}%</p>
                                         <p>Tốc độ gió: {{ $hourly->wind_spd }}m/s</p>
+                                        <p>Áp suất: {{ $hourly->pres }}</p>
                                         <p>Tầm nhìn xa: {{ $hourly->vis}}km</p>
                                         <p>Mực nước biển: {{ $hourly->slp }}mb</p>
                                         <p>Thời điểm: {{ $hourly->pod == "d"  ? 'Ngày' : 'Đêm' }}</p>
@@ -87,12 +78,9 @@
                                         <p>Nhiệt độ: {{ $hourly->temp }} C</p>
                                         <p>Lượng mây: {{ $hourly->clouds }} %</p>
                                     </div>
-
-                                    <!-- Modal footer -->
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -106,7 +94,7 @@
                     <div class="forecast-header">
                         <div class="day">{{ getWeekday($daily->datetime) }}</div>
                         <div class="date">{{ $daily->datetime }}</div>
-                    </div> <!-- .forecast-header -->
+                    </div>
                     <div class="forecast-content">
                         <div class="isToday">
                             <div class="location">Ha Noi</div>
@@ -140,24 +128,18 @@
                                     src="https://www.weatherbit.io/static/img/icons/{{ $hourly->weather_json->icon }}.png" />
                             </div>
                         </div>
-
-                        <!-- The Modal -->
                         <div class="modal" id="hourly{{$hourly->id}}" style="color: #000">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-
-                                    <!-- Modal Header -->
                                     <div class="modal-header">
                                         <h4 class="modal-title">Giờ: {{ $hourly->hour }}</h4>
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
-
-                                    <!-- Modal body -->
                                     <div class="modal-body">
                                         <img src="https://www.weatherbit.io/static/img/icons/{{ $hourly->weather_json->icon }}.png" />
                                         <p>Độ ẩm tương đối: {{ $hourly->rh }}%</p>
                                         <p>Tốc độ gió: {{ $hourly->wind_spd }}m/s</p>
-                                        <p>Áp suất: {{ $hourly->press }}</p>
+                                        <p>Áp suất: {{ $hourly->pres }}</p>
                                         <p>Tầm nhìn xa: {{ $hourly->vis}}km</p>
                                         <p>Mực nước biển: {{ $hourly->slp }}mb</p>
                                         <p>Thời điểm: {{ $hourly->pod == "d"  ? 'Ngày' : 'Đêm' }}</p>
@@ -166,12 +148,9 @@
                                         <p>Nhiệt độ: {{ $hourly->temp }} C</p>
                                         <p>Lượng mây: {{ $hourly->clouds }} %</p>
                                     </div>
-
-                                    <!-- Modal footer -->
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -179,12 +158,8 @@
                     </div>
                 </div>
                 @endif
-
-
-
                 @endforeach
             </div>
-
         </div>
     </div>
 </div>
@@ -223,7 +198,7 @@
         e.preventDefault();
         $('.forecast').removeClass('today');
         $(this).addClass("today");
-    })
+    });
 
 </script>
 @endpush

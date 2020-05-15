@@ -35,12 +35,13 @@
 </div>
 <div class="main-card mb-3 card">
     <div class="card-body overflow-x-scroll">
-        <table class="mb-0 table table-hover white-space-nowrap">
+        <table id="datatable" class="mb-0 table table-hover white-space-nowrap">
             <thead>
                 <tr>
                     <th>STT</th>
                     <th>ID</th>
                     <th>Tên</th>
+                    <th>Thời gian</th>
                     <th>Độ ẩm TB</th>
                     <th>Tốc độ gió max</th>
                     <th>Tốc độ gió mạnh</th>
@@ -81,14 +82,15 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                     <td>
                         <div class="btn-group-md btn-group btn-group-toggle">
                             <a class="btn btn-success btn-watch" href="/admin/weather-hourly" title="Xem Chi tiết">
                                 <i class="fas fa-eye"></i>
                             </a>
-                            <a class="btn btn-primary" href="" title="Sửa">
+                            <!-- <a class="btn btn-primary" href="" title="Sửa">
                                 <i class="fas fa-edit color-white"></i>
-                            </a>
+                            </a> -->
                             <a class="btn btn-danger btn-delete" href="" title="Xóa">
                                 <i class="pe-7s-trash"></i>
                             </a>
