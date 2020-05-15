@@ -20,7 +20,6 @@ class CrawlController extends BaseController
     {
         DB::delete('delete from weather_hourly');
         DB::delete('delete from weather_daily');
-        // \Carbon\Carbon::createFromFormat('Y-m-d H', implode(" ", explode(':',$value->datetime)))
     }
 
     public function crawl(Request $request)
@@ -44,20 +43,20 @@ class CrawlController extends BaseController
 
         // Delete old weather
         
-        DB::delete('delete from weather_hourly');
-        DB::delete('delete from weather_daily');
+        // DB::delete('delete from weather_hourly');
+        // DB::delete('delete from weather_daily');
 
         ini_set('max_execution_time', 600); //10 minutes
         // Default cities ID
         $defaultCitiesID = [
-                            1581130,    //hn
-                            1566083,    //hcm
-                            1581298,    //haiphong
-                            1586203,    //can tho
-                            1587923,    //bien hoa
-                            1572151,    //nha trang
+                            // 1581130,    //hn
+                            // 1566083,    //hcm
+                            // 1581298,    //haiphong
+                            // 1586203,    //can tho
+                            // 1587923,    //bien hoa
+                            // 1572151,    //nha trang
                             // 1580240,    //hue
-                            // 1586896,    //buon ma thuat
+                            1582226896,    //buon ma thuat
                             // 1562798,    //vinh
                             // 1562414,    //vung tau
                             // 1568574,    //quy nhon
