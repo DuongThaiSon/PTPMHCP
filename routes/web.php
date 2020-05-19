@@ -20,21 +20,35 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('login', function (){
+    return view('admin.views.login.login');
+})->name('get-login');
+Route::post('login','AdminController@postLogin')->name('postLogin');
+Route::get('logout','AdminController@getLogout')->name('get-logout');
+
 Route::get('search',[
 	'as'=>'search',
 	'uses'=>'HomeController@search'
 ]);
 
-Route::get('/update-weather', 'CrawlController@crawlDaily');
+Route::get('/update-weather', [
+	'as' => 'updateWeather',
+	'uses' => 'CrawlController@crawlDaily'
+]);
 Route::get("/update-city", 'CrawlController@crawlCity');
 Route::get('/fetch-current', 'CrawlController@crawlCurrent');
 
 Route::get('/admin', 'AdminController@dashboard');
 
 Route::get('/clear-database', 'CrawlController@clearDatabase');
-Route::get('/admin/weather-daily', function (){
-    return view('admin.views.weather-list.weather-daily');
-});
-Route::get('/admin/weather-hourly', function (){
-    return view('admin.views.weather-list.weather-hourly');
-});
+Route::get('/admin/weather-daily', 'AdminWeatherDailyController@index');
+Route::get('/admin/cities', 'AdminCityController@index');
+Route::get('/admin/weather-hourly/{cityid}/{dailyid}', 'AdminWeatherHourlyController@index');
+
+Route::get('/admin/editWeatherDaily/{id}','AdminWeatherDailyController@getEdit')->name('get-edit-daily');
+Route::post('/admin/editWeatherDaily/{id}','AdminWeatherDailyController@postEdit')->name('post-edit-daily');
+
+Route::post('admin/deleteweatherhourly/{id}','AdminWeatherHourlyController@postDelete');
+
+Route::get('/admin/editWeatherHourly/{id}','AdminWeatherHourlyController@getEdit')->name('get-edit-hourly');
+Route::post('/admin/editWeatherHourly/{id}','AdminWeatherHourlyController@postEdit')->name('post-edit-hourly');

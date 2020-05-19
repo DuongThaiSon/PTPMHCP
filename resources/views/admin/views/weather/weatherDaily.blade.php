@@ -13,14 +13,14 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Thêm thông tin thời tiết</h4>
+                            <h4 class="modal-title color-dark">Thêm thông tin thời tiết</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <form action="" class="">
+                            <form action="{{ route('updateWeather') }}" class="">
                                 <div class="form-group">
-                                    <label for="">ID Thành Phố</label>
-                                    <input type="text" class="form-control">
+                                    <label for="" class="color-dark">ID Thành Phố</label>
+                                    <input type="text" name="city_id" class="form-control" required>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-success mx-auto">Thêm</button>
@@ -38,9 +38,10 @@
         <table id="datatable" class="mb-0 table table-hover white-space-nowrap">
             <thead>
                 <tr>
-                    <th>STT</th>
+                    <th>Hành động</th>
+                    <th>Tên TP</th>
                     <th>ID</th>
-                    <th>Tên</th>
+                    <th class="text-center">ID TP</th>
                     <th>Thời gian</th>
                     <th>Độ ẩm TB</th>
                     <th>Tốc độ gió max</th>
@@ -52,51 +53,50 @@
                     <th>Nhiệt độ TB</th>
                     <th>Áp suất TB</th>
                     <th>Điểm sương TB</th>
-                    <th>Lượng mưa tích lũy</th>
+                    <th>Lượng mưa TL</th>
                     <th>Hướng gió TB</th>
                     <th>Nhiệt độ max</th>
                     <th>Nhiệt độ min</th>
                     <th>Hướng gió max</th>
                     <th>Lượng tuyết</th>
-                    <th>Hành động</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach($weather_daily as $row)
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                     <td>
                         <div class="btn-group-md btn-group btn-group-toggle">
-                            <a class="btn btn-success btn-watch" href="/admin/weather-hourly" title="Xem Chi tiết">
+                            <a class="btn btn-success btn-watch"
+                                href="/admin/weather-hourly/{{$row->city_id}}/{{$row->id}}" title="Xem Chi tiết">
                                 <i class="fas fa-eye"></i>
                             </a>
-                            <!-- <a class="btn btn-primary" href="" title="Sửa">
+                            <a class="btn btn-primary" href="{{route('get-edit-daily',$row->id)}}" title="Sửa">
                                 <i class="fas fa-edit color-white"></i>
-                            </a> -->
-                            <a class="btn btn-danger btn-delete" href="" title="Xóa">
-                                <i class="pe-7s-trash"></i>
                             </a>
                         </div>
                     </td>
+                    <td>{{ $row->cityname }}</td>
+                    <td>{{ $row->id }}</td>
+                    <td>{{ $row->city_id }}</td>
+                    <td>{{ $row->datetime }}</td>
+                    <td class="text-center">{{ $row->rh }}</td>
+                    <td class="text-center">{{ $row->max_wind_spd }}</td>
+                    <td class="text-center">{{ $row->wind_gust_spd }}</td>
+                    <td class="text-center">{{ $row->clouds }}</td>
+                    <td class="text-center">{{ $row->precip_gpm }}</td>
+                    <td class="text-center">{{ $row->wind_spd }}</td>
+                    <td class="text-center">{{ $row->slp }}</td>
+                    <td class="text-center">{{ $row->temp }}</td>
+                    <td class="text-center">{{ $row->pres }}</td>
+                    <td class="text-center">{{ $row->dewpt }}</td>
+                    <td class="text-center">{{ $row->precip }}</td>
+                    <td class="text-center">{{ $row->wind_dir }}</td>
+                    <td class="text-center">{{ $row->max_temp }}</td>
+                    <td class="text-center">{{ $row->min_temp }}</td>
+                    <td class="text-center">{{ $row->max_wind_dir }}</td>
+                    <td class="text-center">{{ $row->snow }}</td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

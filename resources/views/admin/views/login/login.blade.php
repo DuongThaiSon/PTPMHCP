@@ -11,7 +11,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-    <link href="{{ asset('assets/client') }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/admin') }}/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="{{ asset('assets/client') }}/login.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 <body>
     <section id="login">
         <div class="card">
-            <form class="form-signin" action="" method="post">
+            <form class="form-signin" action="{{route('postLogin')}}" method="post">
                 @CSRF
                 <h3 class="text-center mt-3 mb-5">Đăng nhập</h3>
                 <div class="input-group">

@@ -11,7 +11,6 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-    <script src="https://kit.fontawesome.com/540cf737fa.js" crossorigin="anonymous"></script>
     <link href="{{ asset('assets/admin') }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('assets/admin') }}/css/datatable.min.css" rel="stylesheet">
     <link href="{{ asset('assets/admin') }}/css/main.css" rel="stylesheet">
@@ -35,6 +34,7 @@
     <script src="{{ asset('assets/admin') }}/js/datatable.min.js"></script>
     <script src="{{ asset('assets/admin') }}/js/chart.min.js"></script>  
     <script src="{{ asset('assets/admin') }}/js/script.js"></script>  
+    <script src="https://kit.fontawesome.com/540cf737fa.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

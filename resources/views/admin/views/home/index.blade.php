@@ -8,7 +8,7 @@
             <div class="card-header-tab card-header-tab-animation card-header">
                 <div class="card-header-title">
                     <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
-                    Thống kê nhiệt độ trong tuần
+                    Thống kê nhiệt độ của thành phố Hà Nội trong tuần
                 </div>
             </div>
             <div class="card-body">

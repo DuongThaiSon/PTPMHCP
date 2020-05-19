@@ -25515,3 +25515,25 @@ input[type="file"]{
 .dataTables_filter input[type='search']{
     border: 1px solid #ddd;
 }
+.dataTables_paginate{
+    position: absolute;
+    right: 25px;
+    bottom: 40px;
+}
+.dataTables_paginate a{
+    cursor: pointer;
+}
+.dataTables_paginate a:hover{
+    color: blue;
+}
+.dataTables_paginate span{
+    padding: 0 5px;
+    cursor: pointer;
+}
+.dataTables_paginate span a{
+    padding: 0 5px;
+    cursor: pointer;
+}
+.color-dark{
+    color: #000;
+}
