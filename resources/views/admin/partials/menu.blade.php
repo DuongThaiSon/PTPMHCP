@@ -37,7 +37,7 @@
                 <li class="app-sidebar__heading">Dashboards</li>
                 <li class="{{ Request::is('admin') ? 'mm-active' : '' }}">
                     <a href="/admin">
-                        <i class="metismenu-icon pe-7s-rocket"></i>
+                        <i class="metismenu-icon pe-7s-home"></i>
                         Trang chủ
                     </a>
                 </li>
@@ -49,7 +49,7 @@
                 </li>
                 <li class="{{ Request::is('admin/cities') ? 'mm-active' : '' }}">
                     <a href="/admin/cities">
-                        <i class="metismenu-icon pe-7s-home"></i>
+                        <i class="metismenu-icon pe-7s-car"></i>
                         Quản lý thành phố
                     </a>
                 </li>

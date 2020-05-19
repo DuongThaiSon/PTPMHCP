@@ -9,6 +9,11 @@
                     <i class="pe-7s-plus icon-gradient bg-happy-itmeo"></i>
                 </div>
             </a>
+            <a href="https://drive.google.com/file/d/1_lSch7yNllhWUSf16PbZpqhIcOTFdBlv/view?usp=sharing" title="Dữ liệu">
+                <div class="page-title-icon">
+                    <i class="pe-7s-info icon-gradient bg-happy-itmeo"></i>
+                </div>
+            </a>
             <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">

@@ -8,6 +8,7 @@
                 <tr>
                     <th>Hành động</th>
                     <th class="text-center">Tên TP</th>
+                    <th class="text-center">ID</th>
                     <th class="text-center">Thời gian</th>
                     <th>Độ ẩm TB</th>
                     <th>Tốc độ gió TB</th>
@@ -38,6 +39,7 @@
                         </div>
                     </td>
                     <td>{{$row->cityname}}</td>
+                    <td>{{$row->hourly_id}}</td>
                     <td>{{ $row->datetime }}</td>
                     <td class="text-center">{{ $row->rh }}</td>
                     <td class="text-center">{{ $row->wind_spd }}</td>

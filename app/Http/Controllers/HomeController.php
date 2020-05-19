@@ -25,7 +25,8 @@ class HomeController extends Controller
         $north = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[0])->limit(1)->get();
         $central = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[1])->limit(1)->get();
         $south = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $defaultCitiesID[2])->limit(1)->get();
-        
+        // $city = City::get();
+        // $name = $ct->name;
         return view('client.index', compact("weathers_daily","ct", "north", "central", "south", "list_city"));
         
     }
@@ -33,7 +34,7 @@ class HomeController extends Controller
     public function search(Request $request){
         $city = City::where('name',$request->key)->firstOrFail();
         $weathers_daily = WeatherDaily::orderBy('datetime', 'asc')->where('city_id', $city->city_id)->limit(7)->get();
-        $nam = $city->name;
-        return view('client.search',compact('nam',"weathers_daily"));
+        $name = $city->name;
+        return view('client.search',compact('name',"weathers_daily"));
     }
 }

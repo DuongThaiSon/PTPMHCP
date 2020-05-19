@@ -26,7 +26,7 @@
                     </div> <!-- .forecast-header -->
                     <div class="forecast-content">
                         <div class="isToday">
-                            <div class="location">{{$nam}}</div>
+                            <div class="location">{{$name}}</div>
                             <div class="degree">
                                 <div class="num">{{ $daily->temp }}<sup>o</sup>C</div>
                                 <div class="forecast-icon">

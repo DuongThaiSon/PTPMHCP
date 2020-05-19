@@ -57,7 +57,7 @@
                                     class="dropdown-menu dropdown-menu-right">
                                     <button type="button" tabindex="0" class="dropdown-item">User Account</button>
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <form action="" method="get">
+                                    <form action="logout" method="get">
                                         <button type="submit" tabindex="0" class="dropdown-item">Log Out</button>
                                     </form>
                                 </div>

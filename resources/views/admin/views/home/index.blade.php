@@ -34,7 +34,7 @@
                         <div class="widget-heading">Nhiệt độ cao nhất</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-success">23<sup>o</sup>C</div>
+                        <div class="widget-numbers text-success">{{$max_temp}}<sup>o</sup>C</div>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         <div class="widget-heading">Nhiệt độ thấp nhất</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-warning">18<sup>o</sup>C</div>
+                        <div class="widget-numbers text-warning">{{$min_temp}}<sup>o</sup>C</div>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         <div class="widget-heading">Độ ẩm trung bình</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-danger">45,9<span> %</span></div>
+                        <div class="widget-numbers text-danger">{{$avg_rh}}<span> %</span></div>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <div class="widget-heading">Lượng mưa trung bình</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-info">200<span> mm</span></div>
+                        <div class="widget-numbers text-info">{{$avg_precip}}<span> mm</span></div>
                     </div>
                 </div>
             </div>
