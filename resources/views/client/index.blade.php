@@ -28,7 +28,7 @@
                     </div>
                     <div class="forecast-content">
                         <div class="isToday">
-                            <div class="location">Ha Noi</div>
+                            <div class="location">Hà Nội</div>
                             <div class="degree">
                                 <div class="num">{{ $daily->temp }}<sup>o</sup>C</div>
                                 <div class="forecast-icon">
@@ -97,7 +97,7 @@
                     </div>
                     <div class="forecast-content">
                         <div class="isToday">
-                            <div class="location">Ha Noi</div>
+                            <div class="location">Hà Nội</div>
                             <div class="degree">
                                 <div class="num">{{ $daily->temp }}<sup>o</sup>C</div>
                                 <div class="forecast-icon">

@@ -27,12 +27,6 @@ Route::post('login','AdminController@postLogin')->name('postLogin');
 Route::get('logout','AdminController@getLogout')->name('get-logout');
 
 Route::group(['prefix'=>'/','middleware'=>'adminlogin'],function(){
-
-	Route::get('search',[
-		'as'=>'search',
-		'uses'=>'HomeController@search'
-	]);
-	
 	Route::get('update-weather', [
 		'as' => 'updateWeather',
 		'uses' => 'CrawlController@crawlDaily'
@@ -60,4 +54,7 @@ Route::group(['prefix'=>'/','middleware'=>'adminlogin'],function(){
 	Route::post('admin/deleteCities/{id}','AdminCityController@postDelete');
 });
 
-
+Route::get('search',[
+	'as'=>'search',
+	'uses'=>'HomeController@search'
+]);
