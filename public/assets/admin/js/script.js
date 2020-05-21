@@ -13,7 +13,7 @@ $(document).ready(function () {
                 label: 'Nhiệt độ',
                 backgroundColor: 'rgba(22, 170, 255, 1)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45]
+                data: [27.1, 28, 29.3, 28.1, 28.9, 28.6, 28.8]
             }]
         },
 

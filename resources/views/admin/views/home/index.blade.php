@@ -58,7 +58,7 @@
                         <div class="widget-heading">Độ ẩm trung bình</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-danger">{{$avg_rh}}<span> %</span></div>
+                        <div class="widget-numbers text-danger">{{ number_format($avg_rh,2) }}<span> %</span></div>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <div class="widget-heading">Lượng mưa trung bình</div>
                     </div>
                     <div class="widget-content-right">
-                        <div class="widget-numbers text-info">{{$avg_precip}}<span> mm</span></div>
+                        <div class="widget-numbers text-info">{{ number_format($avg_precip,2) }}<span> mm</span></div>
                     </div>
                 </div>
             </div>
