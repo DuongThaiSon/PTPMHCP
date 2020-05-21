@@ -58,3 +58,5 @@ Route::get('search',[
 	'as'=>'search',
 	'uses'=>'HomeController@search'
 ]);
+
+Route::get('getchart','AdminController@getChart');
