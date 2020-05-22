@@ -18,11 +18,7 @@ class AdminWeatherDailyController extends Controller
     {
         $weather_daily = WeatherDaily::select('cities.name as cityname','weather_daily.city_id as city_id','weather_daily.id as id','datetime','rh','max_wind_spd','wind_gust_spd','clouds','precip_gpm','wind_spd','slp','temp','pres','dewpt','precip','wind_dir','max_temp','min_temp','max_wind_dir','snow')
         ->join('cities','weather_daily.city_id','=','cities.city_id')->get();
-        // dd($weather_daily);
-        $name = DB::table('cities')->select('*');
-        $name = $name->get();
-        
-        return view('admin.views.weather.weatherDaily',compact('weather_daily','name'));
+        return view('admin.views.weather.weatherDaily',compact('weather_daily'));
     }
 
     /**

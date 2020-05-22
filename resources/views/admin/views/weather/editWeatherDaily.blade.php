@@ -80,10 +80,10 @@
     </form>
 </div>
 <script>
-   var msg = '{{Session::get('thongbao')}}';
-        var exist = '{{Session::has('thongbao')}}';
-        if(exist){
-            alert(msg);
-        }
+    var msg = '{{Session::get('thongbao')}}';
+    var exist = '{{Session::has('thongbao')}}';
+    if(exist){
+        alert(msg);
+    }
 </script>
 @endsection

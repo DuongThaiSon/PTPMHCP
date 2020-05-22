@@ -18,7 +18,8 @@ class AdminWeatherHourlyController extends Controller
      */
     public function index($cityid,$dailyid)
     {
-        $weather_hourly = WeatherHourly::select('weather_hourly.id as hourly_id','cities.name as cityname','weather_daily.city_id as city_id',
+        $weather_hourly = WeatherHourly::select('weather_hourly.id as hourly_id',
+        'cities.name as cityname','weather_daily.city_id as city_id',
         'weather_daily.id as id','weather_hourly.datetime','weather_hourly.rh',
         'weather_hourly.wind_spd','weather_hourly.vis','weather_hourly.slp',
         'weather_hourly.pod','weather_hourly.pres','weather_hourly.dewpt',
