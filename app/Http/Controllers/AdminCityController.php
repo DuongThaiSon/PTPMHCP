@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Response;
 use App\City;
 
@@ -16,8 +15,7 @@ class AdminCityController extends Controller
      */
     public function index()
     {
-        $city = DB::table('cities')->select('*');
-        $city = $city->get();
+        $city = City::get();
         return view('admin.views.weather.cities',compact('city'));
     }
 

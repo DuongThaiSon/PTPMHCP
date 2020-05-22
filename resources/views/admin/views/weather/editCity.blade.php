@@ -11,11 +11,11 @@
             </div>
             <div class="form-group">
                 <label for="">Khu vực</label>
-                <input type="text" class="form-control" name="region" placeholder="max_wind_spd" value={{$city->region}}>
+                <input type="text" class="form-control" name="region" placeholder="max_wind_spd" value="{{$city->region}}">
             </div>
             <div class="form-group">
                 <label for="">Quốc gia</label>
-                <input type="text" class="form-control" name="country" placeholder="wind_gust_spd" value={{$city->country}}>
+                <input type="text" class="form-control" name="country" placeholder="wind_gust_spd" value="{{$city->country}}">
             </div>
         </div>
         <div class="text-center mt-3">
